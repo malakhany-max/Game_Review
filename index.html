@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Review</title>
+    <link rel="shortcut icon" href="images/Capture.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <!-- start aside -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2><span>Game</span>Pulse</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active" id="homeBtn">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </li>
+                <li id="favoritesBtn">
+                    <i class="fa-solid fa-heart"></i>
+                    Favorites
+                </li>
+                <li class="category-title">
+                    <i class="fa-solid fa-gamepad"></i>
+                    Categories
+                </li>
+                <ul id="categories-list">
+                    <li data-category="all">All</li>
+                </ul>
+            </ul>
+        </aside>
+        <!-- end aside -->
+
+        <!-- start main -->
+        <main>
+            <!-- start navbar -->
+            <nav class="navbar">
+                <div class="nav-content">
+                    <div class="search-box">
+                        <input type="search" class="form-control" id="searchInput" placeholder="Search games...">
+                    </div>
+                    <div class="filters">
+                        <select class="form-select" id="platform">
+                            <option value="all">All Platforms</option>
+                            <option value="pc">Windows (PC)</option>
+                            <option value="browser">Browser</option>
+                        </select>
+                        <select class="form-select" id="sort">
+                            <option value="">Sort By</option>
+                            <option value="release-date">Release Date (Newest)</option>
+                            <option value="oldest">Release Date (Oldest)</option>
+                            <option value="popularity">Popularity</option>
+                            <option value="alphabetical">Name (A-Z)</option>
+                            <option value="desc">Name (Z-A)</option>
+                        </select>
+                        <button class="reset-btn" id="resetBtn">
+                            <i class="fa-solid fa-rotate-right"></i>
+                            Reset
+                        </button>
+                    </div>
+                    <div class="review-back d-none" id="reviewBack">
+                        <button class="back-btn" onclick="backToGames()">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <!-- end navbar -->
+
+            <!-- start games -->
+            <section class="games">
+                <div class="container-fluid">
+                    <div class="row g-4" id="gamesContainer">
+                    </div>
+                </div>
+            </section>
+            <!-- end games -->
+            <section class="details d-none" id="detailsSection">
+                <div id="gameDetails"></div>
+            </section>
+        </main>
+        <!-- end main -->
+    </div>
+    <div class="loading" id="loading">
+        <span class="loader"></span>
+        <p class="loading-text mt-4">Loading Games...</p>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
