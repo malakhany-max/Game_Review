@@ -47,7 +47,7 @@ async function displayCategories(data) {
 function displayGames(games) {
     let box = "";
     for (let i = 0; i < games.length; i++) {
-        box += `<div class="col-lg-3 col-md-4 col-sm-6">
+        box += `<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                     <div class="game-card">
                         <div class="card-image">
                             <img src="${games[i].thumbnail || 'images/default.jpg'}">
