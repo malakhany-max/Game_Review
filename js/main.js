@@ -12,8 +12,17 @@ const platform = document.getElementById("platform");
 const resetBtn = document.getElementById("resetBtn");
 const favoritesBtn = document.getElementById("favoritesBtn");
 const homeBtn = document.getElementById("homeBtn");
+const sidebar = document.querySelector(".sidebar");
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
 let searchData;
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];   // arr of all fav
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.remove("hide");
+});
+closeBtn.addEventListener("click", () => {
+    sidebar.classList.add("hide");
+});
 async function getGames() {
     loading.classList.remove("d-none");
     try {

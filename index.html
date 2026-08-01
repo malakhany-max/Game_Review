@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Review</title>
+    <title>GamePulse</title>
     <link rel="shortcut icon" href="images/Capture.ico">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
@@ -16,26 +16,36 @@
     <div class="layout">
         <!-- start aside -->
         <aside class="sidebar">
-            <div class="logo">
-                <h2><span>Game</span>Pulse</h2>
+            <div class="top-bar">
+                <div class="logo">
+                    <h2><span>Game</span>Pulse</h2>
+                </div>
+                <button class="close-btn" id="closeBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
-            <ul class="sidebar-menu">
-                <li class="active" id="homeBtn">
-                    <i class="fa-solid fa-house"></i>
-                    Home
-                </li>
-                <li id="favoritesBtn">
-                    <i class="fa-solid fa-heart"></i>
-                    Favorites
-                </li>
-                <li class="category-title">
-                    <i class="fa-solid fa-gamepad"></i>
-                    Categories
-                </li>
-                <ul id="categories-list">
-                    <li data-category="all">All</li>
+            <div class="sidebar-content">
+                <ul class="sidebar-menu">
+                    <li class="active" id="homeBtn">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </li>
+                    <li id="favoritesBtn">
+                        <i class="fa-solid fa-heart"></i>
+                        Favorites
+                    </li>
+                    <li class="category-title">
+                        <i class="fa-solid fa-gamepad"></i>
+                        Categories
+                    </li>
+                    <ul id="categories-list">
+                        <li data-category="all">All</li>
+                    </ul>
                 </ul>
-            </ul>
+            </div>
         </aside>
         <!-- end aside -->
 
@@ -98,4 +108,5 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
